@@ -14,6 +14,7 @@ import { HeroDetailComponent } from './hero-detail.component';
 import { HighlightDirective } from './highlight.directive';
 import { DashboardComponent } from './dashboard.component';
 import { TitleComponent } from './title.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -21,7 +22,7 @@ import { TitleComponent } from './title.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    ContactModule, 
+    ContactModule,
     CrisisModule,
   ],
   declarations: [
@@ -31,6 +32,7 @@ import { TitleComponent } from './title.component';
     HighlightDirective,
     TitleComponent,
     DashboardComponent,
+    PageNotFoundComponent,
   ],
   providers: [
     HeroService,
