@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { ContactModule } from './contact/contact.module';
+import { CrisisModule } from './crisis/crisis.module';
 
 import { HeroService } from './hero.service';
 import { UserService } from './user.service';
@@ -20,7 +21,8 @@ import { TitleComponent } from './title.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    ContactModule
+    ContactModule, 
+    CrisisModule,
   ],
   declarations: [
     AppComponent,
