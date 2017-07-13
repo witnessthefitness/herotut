@@ -5,14 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { ContactModule } from './contact/contact.module';
 import { CrisisModule } from './crisis/crisis.module';
 
-import { HeroService } from './hero.service';
+import { HeroService } from './heroes/hero.service';
 import { UserService } from './user.service';
 
 import { AppComponent } from './app.component';
-import { HeroesListComponent } from './heroes-list.component';
-import { HeroDetailComponent } from './hero-detail.component';
+import { HeroesListComponent } from './heroes/heroes-list.component';
+import { HeroDetailComponent } from './heroes/hero-detail.component';
 import { HighlightDirective } from './highlight.directive';
-import { DashboardComponent } from './dashboard.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { TitleComponent } from './title.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
