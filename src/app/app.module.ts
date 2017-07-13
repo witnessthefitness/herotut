@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+//debug
+import { Router } from '@angular/router';
+
 import { AppRoutingModule } from './app-routing.module';
 import { ContactModule } from './contact/contact.module';
 import { CrisisModule } from './crisis/crisis.module';
+import { HeroesModule } from './heroes/heroes.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
-import { HeroService } from './heroes/hero.service';
 import { UserService } from './user.service';
 
 import { AppComponent } from './app.component';
-import { HeroesListComponent } from './heroes/heroes-list.component';
-import { HeroDetailComponent } from './heroes/hero-detail.component';
 import { HighlightDirective } from './highlight.directive';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { TitleComponent } from './title.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
@@ -21,23 +22,27 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
+    AppRoutingModule, //move to last position
     ContactModule,
     CrisisModule,
+    HeroesModule,
+    DashboardModule,
+    
   ],
   declarations: [
     AppComponent,
-    HeroesListComponent,
-    HeroDetailComponent,
     HighlightDirective,
     TitleComponent,
-    DashboardComponent,
     PageNotFoundComponent,
   ],
   providers: [
-    HeroService,
     UserService,
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  //debug
+  constructor(router: Router) {
+    console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
+  }
+}
