@@ -9,7 +9,7 @@ import { HeroService } from './hero.service';
 import { UserService } from './user.service';
 
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './heroes.component';
+import { HeroesListComponent } from './heroes-list.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HighlightDirective } from './highlight.directive';
 import { DashboardComponent } from './dashboard.component';
@@ -27,7 +27,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   ],
   declarations: [
     AppComponent,
-    HeroesComponent,
+    HeroesListComponent,
     HeroDetailComponent,
     HighlightDirective,
     TitleComponent,

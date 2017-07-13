@@ -5,10 +5,10 @@ import { Router } from "@angular/router";
 
 @Component({
   selector: 'my-heroes',
-  templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.css'],
+  templateUrl: './heroes-list.component.html',
+  styleUrls: ['./heroes-list.component.css'],
 })
-export class HeroesComponent implements OnInit {
+export class HeroesListComponent implements OnInit {
   heroes: Hero[];
   selectedHero: Hero;
 
