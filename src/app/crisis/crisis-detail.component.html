@@ -1,5 +1,9 @@
 <h3 highlight>Crisis Detail</h3>
-<!-- <div>Crisis id: {{crisis.id}}</div>
-<div>Crisis name: {{crisis.name}}</div> -->
+<div *ngIf="crisis">
+      <div>Crisis id: {{crisis.id}}</div>
+<div>Crisis name: {{crisis.name}}</div>  
+</div>
+
+{{crisis | json}}
 <br>
 <a routerLink="../list">Crisis List</a>

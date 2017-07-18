@@ -19,8 +19,6 @@ export class CrisisService {
     }
 
     getCrisis(id: number): Promise<Crisis> {
-        return new Promise(resolve => {
-            return this.getCrises().then(crises => crises.find(crisis => id === crisis.id ));
-        })
+        return this.getCrises().then(crises => crises.find(crisis => id === crisis.id ));
     }
 }
