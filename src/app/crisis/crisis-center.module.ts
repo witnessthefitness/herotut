@@ -2,17 +2,21 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CrisisService } from './crisis.service';
+import { CrisisCenterComponent } from './crisis-center.component';
+import { CrisisCenterHomeComponent } from './crisis-center-home.component';
 import { CrisisListComponent } from './crisis-list.component';
 import { CrisisDetailComponent } from './crisis-detail.component';
-import { CrisisRoutingModule } from './crisis-routing.module';
+import { CrisisCenterRoutingModule } from './crisis-center-routing.module';
 
 
 @NgModule({
     imports: [
         CommonModule,
-        CrisisRoutingModule,
+        CrisisCenterRoutingModule,
     ],
     declarations: [
+        CrisisCenterComponent,
+        CrisisCenterHomeComponent,
         CrisisListComponent,
         CrisisDetailComponent
     ],
@@ -20,6 +24,6 @@ import { CrisisRoutingModule } from './crisis-routing.module';
         CrisisService
     ]
 })
-export class CrisisModule {
-    
+export class CrisisCenterModule {
+
 }

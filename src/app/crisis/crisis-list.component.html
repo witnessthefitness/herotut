@@ -1,4 +1,14 @@
-<h3 highlight>Crisis List</h3>
+ <h3 highlight>Crisis List</h3>
 <div *ngFor='let crisis of crises | async'>
-    <a routerLink="{{'../' + crisis.id}}">{{crisis.id}} - {{crisis.name}}</a>
-</div>
+    <a [routerLink]="crisis.id">{{crisis.id}} - {{crisis.name}}</a>
+</div> 
+
+<!-- <ul class="items">
+    <li *ngFor="let crisis of crises | async">
+        <a [routerLink]="[crisis.id]" [class.selected]="isSelected(crisis)">
+        <span class="badge">{{ crisis.id }}</span>
+        {{ crisis.name }}
+      </a>
+    </li>
+</ul> -->
+<router-outlet></router-outlet>

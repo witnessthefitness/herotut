@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ContactModule } from './contact/contact.module';
-import { CrisisModule } from './crisis/crisis.module';
+import { CrisisCenterModule } from './crisis/crisis-center.module';
 import { HeroesModule } from './heroes/heroes.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 
@@ -22,12 +22,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule, //move to last position
+    
     ContactModule,
-    CrisisModule,
+    CrisisCenterModule,
     HeroesModule,
     DashboardModule,
-    
+    AppRoutingModule, //move to last position
   ],
   declarations: [
     AppComponent,
@@ -43,6 +43,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 export class AppModule { 
   //debug
   constructor(router: Router) {
-    console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
+    //console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
   }
 }
